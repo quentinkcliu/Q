@@ -1,0 +1,39 @@
+<html>
+
+<head>   
+  <style fprolloverstyle>A:hover {color: #FFFFFF; text-decoration: underline}
+  </style>
+</head>
+
+<body bgcolor="#aadffc" text="#486754" link="#1e90ff" vlink="#bb99aa" alink="#bb8899">
+
+<table border=0 align=center valign=middle width=300>     <tr>      
+    <td align=left valign=middle colspan=2>         
+      <h2>First Year ISP:</h2><p>         </td>   
+  </tr>   
+  <tr>	
+    <td align=left valign=middle colspan=2>         
+      <ul><li> 
+      <a href="calculator.html">START CALCULATOR APPLET</a>    
+      </ul><p>       </td>   
+  </tr>   
+  <tr>
+    <td align=center>   
+    <script language="JavaScript1.2">
+      <!--/*Typing ScrollerSubmitted by bengaliboy00@hotmail.com 
+      (hp: http://www.angelfire.com/nt/bengaliboy/) With modifications       by Dynamicdrive.comFor full source code, usage terms, and 100s more 
+      scripts, visit http://dynamicdrive.com*///Secify scroller contentsvar line=new 
+Array()
+line[1]="This is an awsome script."
+line[2]="Check out my Calculator Applet."
+line[3]="It is able to perform simple calculations."
+line[4]="- W a r n i n g -"
+line[5]="Calculate at own risk!"
+line[6]="Have Fun!"
+//Specify font size for scollervar ts_fontsize="16px"//--Don't edit below this linevar longestmessage=1for (i=2;i<line.length;i++){if (line[i].length>line[longestmessage].length)longestmessage=i}//Auto set scroller widthvar tscroller_width=line[longestmessage].lengthlines=line.length-1 //--Number of lines//if IE 4+ or NS6if (document.all||document.getElementById){document.write('<form name="bannerform">')document.write('<input type="text" name="banner" size="'+tscroller_width+'"')document.write('  style="background-color: '+document.bgColor+'; color: '+document.body.text+'; font-family: verdana; font-size: '+ts_fontsize+'; font-weight:bold; border: medium none" onfocus="blur()">')document.write('</form>')}temp=""nextchar=-1;nextline=1;cursor="\\"function animate(){if (temp==line[nextline] & temp.length==line[nextline].length & nextline!=lines){nextline++;nextchar=-1;document.bannerform.banner.value=temp;temp="";setTimeout("nextstep()",1000)}else if (nextline==lines & temp==line[nextline] & temp.length==line[nextline].length){nextline=1;nextchar=-1;document.bannerform.banner.value=temp;temp="";setTimeout("nextstep()",1000)}else{nextstep()}}function nextstep(){if (cursor=="\\"){cursor="|"}else if (cursor=="|"){cursor="/"}else if (cursor=="/"){cursor="-"}else if (cursor=="-"){cursor="\\"}nextchar++;temp+=line[nextline].charAt(nextchar);document.bannerform.banner.value=temp+cursorsetTimeout("animate()",25)}//if IE 4+ or NS6if (document.all||document.getElementById)window.onload=animate// --></script>      
+    </td>     </tr>
+</table>
+
+</body>
+
+</html>

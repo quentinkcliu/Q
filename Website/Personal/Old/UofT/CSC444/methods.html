@@ -1,0 +1,219 @@
+<html>
+
+<head>
+   <title> Methods for the Dragon Adventure Game </title>
+   <style fprolloverstyle>A:hover {color: #FFFFFF; text-decoration: underline}</style>
+</head>
+
+<body bgcolor="#aadffc" text="#486754" link="#1e90ff" vlink="#bb99aa" alink="#bb8899">
+
+<center>
+
+<hr width=85% font color=white>
+<h1>METHODS</h1>
+<hr width=85% font color=white>
+
+<table width=550>
+   <tr>
+	   <td align=center>Our group is fully affiliated with CMI.<p></td>
+   </tr>
+   <tr>
+      <td align=center>
+		   <a href="http://www.macrosoft.hopto.org" target="_blank"><img src="CMI1_0_logo.jpg"></a><p><br>
+	   </td>
+   </tr>
+	<tr>
+	   <td>
+          This implies that all of our code obides by the strict outline given in the standard.<p>
+
+          Therefore, our method names, arguments, return types, etc. 
+          all conform to the well organized specifications constructed by Macrosoft.<p>
+
+          Specifications may be accessed through the 
+			 <a href="http://www.tripledoubleyou.com/mapping/doc/index.html" target="_blank">CMI Documentation</a>.<p>
+      </td>
+	</tr>
+</table>
+
+<table border=1 cellspacing=8 cellpadding=8 width=900>
+   <tr>
+	   <th colspan=2>
+         Here is a quick glance at our Method prototypes:<p>
+         <font color=red>
+			note: ***For Most Up To Date Specifications, Consult CMI Documentation***
+         </font>
+      </th>
+	</tr>
+
+   <tr>
+      <td align=center><font color=purple>Method Prototype</font></td>
+		<td align=center><font color=purple>Description</font></td>
+	</tr>
+
+   <tr>
+	   <td width=500>
+          <font color=green>void</font>
+			 <b>addMoveableObj</b>
+			 (<font color=blue>UniqueId</font> roomId, 
+			  <font color=blue>char</font> type</font>, 
+			  <font color=blue>UniqueId </font>objectId</font>)
+      </td>
+	   <td>			 
+          Given the unique id of a moveable object, its class (creature or artifact) 
+			 and the unique id of a room, adds the object to the relevant list 
+			 of things in that room.  
+      </td>
+	</tr>
+
+   <tr>
+	   <td>
+			 <font color=green>void</font>
+			 <b>appendDescription</b>
+			 (<font color=blue>UniqueId</font> roomId, 
+			  <font color=blue>java.lang.String</font> text)
+      </td>
+	   <td>			 
+          Given the unique id of a room, and a piece of text, appends the 
+			 text to the description of the room.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>java.util.List</font>
+			 <b>getArtifactList</b>
+			 (<font color=blue>UniqueId</font> roomId)
+      </td>
+	   <td>			 
+			 Given the unique id of a room, provides a list of unique ids of 
+			 all artifacts in that room.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>java.util.List</font>
+			 <b>getCreatureList</b>
+			 (<font color=blue>UniqueId</font> roomId)
+      </td>
+	   <td>			 
+          Given the unique id of a room, provides a list of unique ids of 
+			 all creatures in the room.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>java.lang.String</font>
+			 <b>getDescription</b>
+			 (<font color=blue>UniqueId</font> roomId)
+      </td>
+	   <td>			 
+          Given the unique id of a room, returns a textual description of that room.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>java.util.List</font>
+			 <b>getPortalList</b>
+			 (<font color=blue>UniqueId</font> roomId)
+      </td>
+	   <td>			 
+          Given the unique id of a room, provides a list containting the 
+			 direction and description of every portal in the room.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>UniqueId</font>
+			 <b>getSuccessor</b>
+			 (<font color=blue>UniqueId</font> roomId, 
+			  <font color=blue>char</font> direction)
+      </td>
+	   <td>			 
+          Given the unique id of a room, and a direction, returns the unique id 
+			 of the next adjacent room in that direction.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>java.util.List</font>
+			 <b>initialize</b>
+			 (<font color=blue>java.util.List</font> ids)
+      </td>
+	   <td>			 
+          Given a list of unique ids of moveable objects, randomly places the 
+			 objects in various rooms, and returns an ordered list of the 
+			 unique ids of the rooms the moveable objects were placed in.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>void</font>
+			 <b>loadMap()</b>
+      </td>
+	   <td>			 
+          Loads the map from a configuration file.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>void</font>
+			 <b>removeMoveableObj</b>
+			 (<font color=blue>UniqueId</font> roomId, 
+			  <font color=blue>char</font> type, 
+			  <font color=blue>UniqueId</font> objectId)
+      </td>
+	   <td>			 
+          Given the unique id of a moveable object, its class (creature or artifact) 
+			 and the unique id of a room, removes the object from the relevant list 
+			 of things in that room.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>void</font>
+			 <b>setAM</b>(
+			 <font color=blue>IArtifactManager</font> amRef)
+      </td>
+	   <td>			 
+          Sets reference to Artifact Manager.  
+      </td>
+	</tr>
+			 
+   <tr>
+	   <td>
+			 <font color=green>void</font>
+			 <b>setCFM</b>
+			 (<font color=blue>ICreatureAndFightManager</font> cfmRef)
+      </td>
+	   <td>			 
+          Sets reference to Creature and Fight Manager.
+      </td>
+	</tr>
+
+   <tr>
+	   <th colspan=2>
+         <font color=red>
+			note: ***For Most Up To Date Specifications, Consult <a
+			href="http://www.tripledoubleyou.com/mapping/doc/index.html" target="_blank">CMI
+			Documentation</a>***
+         </font>
+      </th>
+	</tr>
+
+</table>
+<p>
+<hr width=85% font color=white>
+</center>
+
+</body>
+
+</html>
+

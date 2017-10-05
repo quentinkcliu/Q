@@ -1,0 +1,50 @@
+/* Big boys Cascading Style Sheet*/
+
+BBtitle {
+    text-align: left;
+    font-size: 40px;
+	color: red;
+}
+
+BBday {
+    text-align: left;
+    font-size: 13px;
+	color: black;
+}
+
+BBpics {
+    text-align: left;
+    font-size: 20px;
+	color: black;
+}
+
+date {
+    color: red;
+	font-weight: bold;
+}
+event {
+    color: blue;
+	font-weight: bold;
+}
+dinner {
+    color: blue;
+	font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td {
+    text-align:center;
+}
+

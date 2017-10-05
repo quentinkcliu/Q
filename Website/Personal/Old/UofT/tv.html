@@ -1,0 +1,318 @@
+<html>
+
+<style fprolloverstyle>A:hover {color: #FFFFFF; text-decoration: underline}</style>
+
+<body bgcolor="#aadffc" text="#486754" link="#1e90ff" vlink="#bb99aa" alink="#ddaabb"
+onLoad="if(brOK) setHandlers()" onUnload="if(brOK) {if(tid)clearTimeout(tid);}">
+
+<SCRIPT >
+// Watching Eyes Script
+// By Virtual_Max  http://www.geocities.com/siliconvalley/lakes/8620
+// Modified by Dynamicdrive.com (IE specific bug fixed)
+// Permission granted to Dynamicdrive.com to include the script in it's archive
+// For 100's more DHTML scripts, visit Dynamicdrive.com
+//
+// Permission to use, copy, modify, and distribute this software and its documentation 
+// for NON-COMMERCIAL purposes and  without fee is hereby granted provided that this 
+// notice appears in all copies. 
+//
+// VIRTUAL MAX MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY OF THE 
+// SOFTWARE, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE IMPLIED 
+// WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR 
+// NON-INFRINGEMENT. VIRTUAL MAX SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY 
+// LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING THIS SOFTWARE OR 
+// ITS DERIVATIVES.
+
+var brOK=false;
+var mie=false;
+var ex=0;
+var ey=0;
+var ae;
+var le;
+var re;
+var x0;
+var y0;
+var tid;
+var realx;
+var realy;
+var loaded=false;
+if(parseInt(navigator.appVersion.charAt(0))>=4)
+  {brOK=true;}
+if(navigator.appName.indexOf("Microsoft")!=-1)
+  {mie=true; }
+function myhandler(e)
+{ex=e.pageX; 
+ ey=e.pageY;
+ moveeye()
+ return routeEvent(e);
+}
+
+function moveeye()
+{dy=ey-y0-20;
+ dx1=ex-x0-20;
+ dx2=ex-x0-60;
+
+ r=Math.sqrt(dx1*dx1+dy*dy);
+ if(r<20) r=20
+ dx1=dx1*10/r+x0+10;
+ dy1=dy*10/r+y0+10;
+
+ r=Math.sqrt(dx2*dx2+dy*dy);
+ if(r<20) r=20
+ dx2=dx2*10/r+x0+50;
+
+ ae.left=x0;  
+ ae.top=y0;  
+ le.left=dx1;  
+ le.top=dy1;  
+ re.left=dx2;  
+ re.top=dy1;  
+}
+
+
+function setHandlers()
+{if(!mie)   {y0=document.eyeballs.top;
+             x0=document.eyeballs.left;
+             ae=document.eyeballs;
+             le=document.lefteye;   
+             re=document.righteye;   
+             window.captureEvents(Event.MOUSEMOVE);
+             window.onMouseMove=myhandler;
+            }
+ else       {y0=document.all.eyeballs.style.pixelTop;
+             x0=document.all.eyeballs.style.pixelLeft;
+             ae=document.all.eyeballs.style;
+             le=document.all.lefteye.style;
+             re=document.all.righteye.style;
+            }
+ realx=x0+0.1;
+ realy=y0+0.1;
+ 
+ moveall();
+ loaded=true;
+}
+
+function moveall()
+{rx=realx+40
+ ry=realy+40;
+ rx+=(ex-rx)*0.1;
+ ry+=(ey-ry)*0.1;
+ realx=rx-40;
+ realy=ry-40;
+ x0=Math.round(realx);
+ y0=Math.round(realy);
+ moveeye();
+ tid=setTimeout('moveall()',100);
+}
+
+function placeeyes(x,y)
+{if(brOK)
+ {ex=x+40;
+  ey=y+40;
+  s ='<DIV ID="dummy"    STYLE="position:absolute; top:'+y+'; left:'+x+'; width:10; height:10;">&nbsp;</DIV>';
+  s+='<DIV ID="eyeballs" STYLE="position:absolute; top:'+y+'; left:'+x+'; width:80; height:40;"  ><IMG SRC="Pictures/eyeballs.gif"  border=0></DIV>';
+  s+='<DIV ID="lefteye"  STYLE="position:absolute; top:'+(y+10)+'; left:'+(x+10)+'; width:20; height:20;"  ><IMG SRC="Pictures/eye.gif"       border=0></DIV>';
+  s+='<DIV ID="righteye" STYLE="position:absolute; top:'+(y+10)+'; left:'+(x+50)+'; width:20; height:20;"  ><IMG SRC="Pictures/eye.gif"       border=0></DIV>';
+  document.writeln(s);
+ }
+}
+</script>
+<script FOR=document Event="onmousemove()">
+if((mie==true)&&(brOK)&&loaded)
+  {ex=document.body.scrollLeft+event.x;
+   ey=document.body.scrollTop+event.y;
+   moveeye();
+  }
+</script>
+
+<hr width=75% color=white>
+
+<center>
+<h2> TV / MOVIE </h2>
+</center>
+
+<hr width=75% color=white>
+
+<table border=0 align=center cellpadding=5 cellspacing=20>
+
+   <th colspan=2>
+      <h2>Favourite TV shows:</h2>
+   </th>
+
+   <tr valign=top>
+	   <td width=150 nowrap align=center> 
+		   <font color=#4682b4> DragonBall<font size=5>Z</font> </font> <br>
+          (Japanese Anime)
+		</td>
+      <td nowrap>
+		   (Just AWSOME !!! watch it on<a href="http://www.ytv.com/" target="_blank"> YTV</a>)<br>
+			<font color=#325599>
+            Characters: Goku, Gohan, Piccalo, Vegetta, Trunks . . .           
+         </font>
+      </td>
+   </tr>      
+
+   <tr valign=top>
+	   <td nowrap align=center> 
+		   <font color=#4682b4>StarGate-SG1</font> <br>
+			(SCI-FI / Action)
+	   </td>
+      <td nowrap> 
+		   <a href="http://www.stargate-sg1.com/home.html"                     target="_blank">http://www.stargate-sg1.com/home.html</a>
+         <font color=#325599><br>
+             Travel through a wormhole to a whole new world.
+         </font>
+      </td>
+   </tr>
+
+   <tr valign=top>
+	   <td nowrap align=center valign=center> 
+		   <font color=#4682b4> Star Trek </font> <br>
+			(Science Fiction)
+		</td>
+      <td> 
+		   <a href="http://www.startrek.com" target="_blank">www.startrek.com</a><br>
+         <font color=#325599>
+            (TOS, TNG, DS9, Voyager, & Enterprise) <br>
+             The Next Generation series was the best series.<br>
+             Don't you agree?
+            <form action="mailto:gokuandpiccalo@hotmail.com" method="POST">
+            <input type="radio" name="yes/no:" value="YES" checked>Yes 
+            <input type="radio" name="yes/no:" value="NO">No <br>
+            <input id=button type=submit value=Submit!> 
+            <font face="Verdana, Arial, Helvetica" size=1>
+            </form>
+               <a href="results.html">View results</A>&nbsp; 
+            </font>
+         </font>
+      </td>     
+   </tr>
+
+   <tr valign=top>
+	   <td nowrap align=center> 
+		   <font color=#4682b4>The Outer Limits</font> <br>
+			(Science Fiction)
+		</td>
+      <td nowrap> 
+		   <a href="http://www.theouterlimits.com" target="_blank">www.theouterlimits.com</a> 
+         <font color=#325599><br>
+  		      Invision the endless realities . . .
+         </font>
+      </td>
+   </tr>
+
+   <tr valign=top>
+	   <td nowrap align=center> 
+		   <font color=#4682b4>Andromeda</font> <br>
+			(Action / Sci-Fi)
+		</td>
+      <td nowrap> 
+		   <a href="http://www.andromedatv.com" target="_blank">www.andromedatv.com</a> 
+         <font color=#325599><br>
+            Watch for Lexa Doig -aka- Andromeda
+         </font>
+      </td>
+   </tr>
+
+   <tr valign=top>
+	   <td nowrap align=center> 
+		   <font color=#4682b4>Angel</font> <br>
+			(Fighting / Action)
+	   </td>
+      <td nowrap> 
+		   <a href="http://www.thewb.com/angel/" target="_blank">http://www.thewb.com/angel/</a>
+         <font color=#325599><br>
+            Watch for Charisma Carpenter -aka- Cordellia
+         </font>
+      </td>
+   </tr>
+
+   <tr valign=top>
+	   <td nowrap align=center> 
+		   <font color=#4682b4>The Weakest Link</font> <br>
+			(Knowledge / I.Q.)
+	   </td>
+      <td nowrap> 
+		   <a href="http://www.bbc.co.uk/weakestlink/" target="_blank">http://www.bbc.co.uk/weakestlink/</a>
+         <font color=#325599><br>
+            Increase your general knowledge with rapid fire questions.
+         </font>
+      </td>
+   </tr>
+
+   <tr valign=top>
+	   <td nowrap align=center> 
+		   <font color=#4682b4>Medabots</font> <br>
+			(Cartoon)
+		</td>
+      <td nowrap> 
+		   <a href="http://www.medabots.com" target="_blank">http://www.medabots.com</a>
+	      <font color=#325599><br>
+            A new cartoon, like digimon and megaman all in one.
+         </font>
+	   </td>
+   </tr>
+
+</table>
+
+<hr width=75% color=white><p>
+
+<table border=0 cellspacing=5 cellpadding=2 align=center>
+   
+	<th colspan=2>
+	   <h2><hr>Favorite Movies</h2>
+      <font size=2 color="darklightgrey"><i>
+		   (listed in <font color=#ad6789>ORDER</font> of preferance)</i>
+		</font><hr>
+	</th>
+
+   <tr width=900>
+	   <td nowrap>Sci Fi:</td>    
+      <td nowrap><font color=#325599>Matrix</font></td>
+   </tr>
+
+   <tr>
+	   <td nowrap>Comedy:</td>    
+      <td nowrap><font color=#325599>Dumb and Dumber</font></td>
+   </tr>
+
+   <tr>
+	   <td nowrap>Action:</td>    
+      <td nowrap><font color=#325599>*TBA*</font></td>
+   </tr>
+
+   <tr>
+	   <td nowrap>Scary:</td>    
+      <td nowrap><font color=#325599>Poltergeist</font></td>
+   </tr>
+
+   <tr>
+	   <td nowrap>Suspence:</td>  
+      <td nowrap><font color=#325599>Speed</font></td>
+   </tr>
+
+   <tr>
+	   <td nowrap>Romance:</td>   
+      <td nowrap><font color=#325599>*TBA*</font></td>
+   </tr>
+
+   <tr>
+	   <td nowrap>Adventure:</td> 
+      <td nowrap><font color=#325599>Waterworld</font></td>
+   </tr>
+
+</table>
+
+<p><hr width=75% color=white>
+
+<script>
+if (document.all||document.layers)
+ placeeyes(255,90);
+</script>
+
+</body>
+
+</html>
+
+
+

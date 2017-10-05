@@ -1,0 +1,136 @@
+<html>
+
+<head>
+<title>Calculator</title>
+
+<style>
+<!--
+.intro{
+position:absolute;
+left:0;
+top:0;
+layer-background-color:blue;
+background-color:blue;
+border:0.1px solid blue;
+z-index:10;
+}
+-->
+</style>
+
+</head>
+
+<!--"#57a4d6"-->
+<body bgcolor="#57a4d6" text=white>
+
+<div id="i1" class="intro"></div><div id="i2" class="intro"></div><div id="i3"
+class="intro"></div><div id="i4" class="intro"></div><div id="i5" class="intro"></div><div
+id="i6" class="intro"></div><div id="i7" class="intro"></div><div id="i8" class="intro"></div>
+<script language="JavaScript1.2">
+
+/*
+Left-Right Stripy Curtain Script- © Dynamic Drive (www.dynamicdrive.com)
+For full source code, 100's more free DHTML scripts, and TOS,
+visit http://www.dynamicdrive.com
+*/
+
+var ns4=document.layers?1:0
+var ie4=document.all?1:0
+var ns6=document.getElementById&&!document.all?1:0
+
+var speed=20
+var temp=new Array()
+var temp2=new Array()
+if (ns4){
+for (i=1;i<=8;i++){
+temp[i]=eval("document.i"+i+".clip")
+temp2[i]=eval("document.i"+i)
+temp[i].width=window.innerWidth
+temp[i].height=window.innerHeight/8
+temp2[i].top=(i-1)*temp[i].height
+}
+}
+else if (ie4||ns6){
+var clipright=ns6?window.innerWidth:document.body.clientWidth
+clipleft=0
+for (i=1;i<=8;i++){
+temp[i]=ns6?document.getElementById("i"+i).style:eval("document.all.i"+i+".style")
+temp[i].width=ns6?window.innerWidth-15:document.body.clientWidth
+temp[i].height=ns6?window.innerHeight/8:document.body.offsetHeight/8
+temp[i].top=(i-1)*parseInt(temp[i].height)
+}
+}
+function openit(){
+window.scrollTo(0,0)
+if (ns4){
+for (i=1;i<=8;i=i+2)
+temp[i].right-=speed
+for (i=2;i<=8;i=i+2)
+temp[i].left+=speed
+if (temp[2].left>window.innerWidth)
+clearInterval(stopit)
+}
+else if (ie4||ns6){
+clipright-=speed
+for (i=1;i<=8;i=i+2){
+temp[i].clip="rect(0 "+clipright+" auto 0)"
+}
+clipleft+=speed
+for (i=2;i<=8;i=i+2){
+temp[i].clip="rect(0 auto auto "+clipleft+")"
+}
+if (clipright<=0){
+if (ns6){
+for (i=1;i<=8;i++)
+temp[i].display="none"
+}
+clearInterval(stopit)
+}
+}
+}
+function gogo(){
+stopit=setInterval("openit()",100)
+}
+gogo()
+</script>
+
+<hr width="550" size=3><p>
+<center>
+   <h2>
+	   <img src="Pictures/EngLogo.jpg" align=middle> 
+		First Year Computer Engineering ISP
+	</h2>
+</center>
+
+<hr width="550" size=3><p>
+
+<table cellspacing=20 cellpadding=10 border=17 width=645 align=center>
+
+<tr> 
+  <th>Description:</th> <th>Applet:</th> 
+</tr>
+
+<tr>
+  <td width=500>
+    <center><hr><p> 
+      This is the 
+      <font color=#ffdab9>*</font>first
+      <font color=#ffdab9>*</font> applet<br> 
+      I created with 
+      <font color=#ffd700>java</font>.<p><hr><p>
+      It is a very <u>simple</u> version of a calculator 
+      <font size=1>(no BEDMAS)</font><p><hr><p>
+      Java is very sloooow,<br> so press the keys slowly.<p><hr>
+    </center>
+  </td>
+  <td width=300 align=center>
+    <applet code="calculator.class" width=225 height=490></applet>
+  </td>
+</tr>
+
+</table>
+
+<P><hr width="550" size=3>
+
+</body>
+
+</html>

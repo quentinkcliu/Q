@@ -1,0 +1,613 @@
+<html>
+
+<head>
+<style fprolloverstyle>A:hover {color: #FFFFFF; font-size: 12pt; text-decoration: underline}</style>
+</head>
+
+<body bgcolor="#aadffc" text="#486754" link="#1e90ff" vlink="#bb99aa" alink="#bb8899">
+
+<style type="text/css">
+<!-- 
+.textanimlink,a {
+text-decoration : none;
+}
+P.main {
+	font-family : Arial;
+	font-size : 15pt;
+	font-weight : bold;
+}
+-->
+</style>
+
+
+<Script Language="Javascript">
+<!-- Hiding
+
+/*
+Script created by Lefteris Haritou
+(lef@the.forthnet.gr)
+Permission granted to Dynamicdrive.com to feature the script
+For more DHTML scripts, visit Dynamicdrive.com
+*/
+
+bname=navigator.appName;
+bversion=parseInt(navigator.appVersion)
+if ((bname=="Netscape" && bversion>=4) || (bname=="Microsoft Internet Explorer" && bversion>=4))
+window.onload=start
+else
+stop();
+window.onunload=stop
+if (bname=="Netscape"){
+brows=true
+dt=9
+}
+else{
+brows=false
+dt=90
+}
+var z=0;
+var msg=0;
+var rgb=0;
+var link=false;
+var status=true;
+var updwn=false;
+var message= new Array();
+var value=0;
+var h=window.innerHeight;
+var w=window.innerWidth;
+var timer1;
+var timer2;
+var timer3;
+var convert = new Array()
+var hexbase= new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F");
+
+// Put here your own messages. Add as many as you wan't (Do not edit anything else in the Script except the lines below)
+
+var bgcolor="#FFFFFF"; //Color of background
+var color="#00008D";  //Color of the Letters
+
+message[0]='Example is not another way to teach,<br> it is the only way to teach.<br>--Einstein'
+message[1]='Forget injuries, never forget kindness.<br>--Confucius.'
+message[2]='Anyone who has never made a mistake,<br> has never tried anything new.<br> --Einstein'
+message[3]='It is not the destination that is important,<br> rather the
+journey.<br>--Recalled from Star Trek Voyager'
+message[4]='Learn from yesterday, live for today, hope for tommorrow. <br> The important thing is not to stop questioning.<br>--Einstein'
+message[5]='Darkness can not drive out darkness; only light can do that.<br>Hate can not drive out hate; only love can do that.<br>--Dr. Marin Luther King Jr. American civil rights leader'
+message[6]='Life is like riding a bicycle.<br> To keep your balance you must keep moving. <br>--Einstein'
+message[7]='Put your hand on a hot stove for a minute, and it seems like an hour. . .'
+message[8]='Sit with a pretty girl for an hour, and it seems like a minute. . .'
+message[9]='That is RELATIVITY. <br>--Einstein'
+message[10]='Thats all folks!'
+message[11]='- The following is a repeat -'
+
+// Put here your own messages. Add as many as you wan't (Do not edit anything else in the Script except the lines above)
+
+for (x=0; x<16; x++){
+for (y=0; y<16; y++){
+convert[value]= hexbase[x] + hexbase[y];
+value++;
+}
+}
+
+redx=color.substring(1,3);
+greenx=color.substring(3,5);
+bluex=color.substring(5,7);
+hred=eval(parseInt(redx,16));
+hgreen=eval(parseInt(greenx,16));
+hblue=eval(parseInt(bluex,16));
+eredx=bgcolor.substring(1,3);
+egreenx=bgcolor.substring(3,5);
+ebluex=bgcolor.substring(5,7);
+ered=eval(parseInt(eredx,16));
+egreen=eval(parseInt(egreenx,16));
+eblue=eval(parseInt(ebluex,16));
+red=ered;
+green=egreen;
+blue=eblue;
+
+function start(){
+if ((bname=="Netscape" && bversion>=4) || (bname=="Microsoft Internet Explorer" && bversion>=4)){
+link=false;
+updwn=true;
+if (brows)
+res=document.layers['textanim'].top
+else{
+textanim.style.width=document.body.offsetWidth-20;
+textanim.innerHTML='<Pre><P Class="main" Align="Center">'+message[msg]+'</P></Pre>'
+res=textanim.style.top
+for (x=0; x<document.all.length; x++)
+if(document.all[x].id=="textanimlink")
+link=true;
+}
+up()
+}
+}
+
+function stop(){
+clearTimeout(timer1);
+clearTimeout(timer2);
+clearTimeout(timer3);
+}
+
+function resz(){
+h=window.innerHeight;
+w=window.innerWidth;
+if (updwn)
+timer1=setTimeout('up()',1000)
+else
+timer2=setTimeout('down()',1000)
+}
+
+function breakf(){
+if (status){
+clearTimeout(timer1);
+clearTimeout(timer2);
+status=false
+return;
+}
+else{
+status=true;
+if (updwn)
+timer1=setTimeout('up()',dt)
+else
+timer2=setTimeout('down()',dt)
+}
+}
+
+
+function up(){
+if (red<hred){
+if ((red+7)<hred)
+red+=7;
+else
+red=hred
+redx = convert[red]
+}
+else{
+if ((red-7)>hred)
+red-=7;
+else
+red=hred
+redx = convert[red]
+}
+
+if (green<hgreen){
+if ((green+7)<hgreen)
+green+=7;
+else
+green=hgreen
+greenx = convert[green]
+}
+else{
+if ((green-7)>hgreen)
+green-=7;
+else
+green=hgreen
+greenx = convert[green]
+}
+
+if (blue<hblue){
+if ((blue+7)<hblue)
+blue+=7;
+else
+blue=hblue
+bluex = convert[blue]
+}
+else{
+if ((blue-7)>hblue)
+blue-=7;
+else
+blue=hblue
+bluex = convert[blue]
+}
+
+rgb = "#"+redx+greenx+bluex;
+if (brows){
+document.layers['textanim'].document.linkColor=rgb;
+document.layers['textanim'].document.vlinkColor=rgb;
+if (window.innerHeight!=h || window.innerWidth!=w){
+clearTimeout(timer1);
+resz()
+return;
+}
+else{
+document.layers['textanim'].document.write('<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>')
+document.layers['textanim'].document.close();
+}
+}
+else{
+textanim.style.color=rgb;
+if(link)
+textanimlink.style.color=rgb;
+}
+if (z<38){
+if (brows)
+document.layers['textanim'].top--
+else
+textanim.style.posTop--
+z++
+timer1=setTimeout('up()',dt)
+}
+else
+{
+updwn=false;
+down()
+}
+}
+
+
+function down(){
+if (red<ered){
+if ((red+7)<ered)
+red+=7;
+else
+red=ered
+redx = convert[red]
+}
+else{
+if ((red-7)>ered)
+red-=7;
+else
+red=ered
+redx = convert[red]
+}
+
+if (green<egreen){
+if ((green+7)<egreen)
+green+=7;
+else
+green=egreen
+greenx = convert[green]
+}
+else{
+if ((green-7)>egreen)
+green-=7;
+else
+green=egreen
+greenx = convert[green]
+}
+
+if (blue<eblue){
+if ((blue+7)<eblue)
+blue+=7;
+else
+blue=eblue
+bluex = convert[blue]
+}
+else{
+if ((blue-7)>eblue)
+blue-=7;
+else
+blue=eblue
+bluex = convert[blue]
+}
+
+rgb = "#"+redx+greenx+bluex;
+if (brows){
+document.layers['textanim'].document.linkColor=rgb;
+document.layers['textanim'].document.vlinkColor=rgb;
+if (window.innerHeight!=h || window.innerWidth!=w){
+clearTimeout(timer2);
+resz()
+return;
+}
+else{
+document.layers['textanim'].document.write('<Pre><P Class="main" Align="Center"><font color="'+rgb+'">'+message[msg]+'</font></P></Pre>')
+document.layers['textanim'].document.close();
+}
+}
+else{
+textanim.style.color=rgb;
+if(link)
+textanimlink.style.color=rgb;
+}
+
+if (z<76){
+if (brows)
+document.layers['textanim'].top--
+else
+textanim.style.posTop--
+z++
+timer2=setTimeout('down()',dt)
+}
+else
+{
+if (brows){
+document.layers['textanim'].document.write('')
+document.layers['textanim'].document.close();
+}
+else
+textanim.innerHTML='';
+window.clearInterval(timer2);
+if(msg<message.length-1){
+msg++;
+z=0;
+if (brows){
+document.layers['textanim'].top=res;
+}
+else
+textanim.style.top=res;
+timer3=setTimeout('start()',100);
+}
+else
+{
+msg=0;
+z=0;
+if (brows)
+document.layers['textanim'].top=res;
+else
+textanim.style.top=res;
+timer3=setTimeout('start()',2000);
+}
+}
+}
+
+
+// done hiding -->
+</Script>
+<Div id="textanim" style="position: absolute; left: 0; top: 440" onclick="breakf()">
+</Div>
+<Layer name="textanim" left=0 top=440>
+</Layer>
+
+<center>
+
+<hr width=75% font color=white>
+<h2>Interesting Stuff</h2>
+<hr width=75% font color=white><p>
+
+<table width=600 height=350 border=0>
+<tr><td>
+To laugh is to risk appearing a fool;<br>
+To weep is to risk appearing sentimental;<br>
+To reach out to another is to risk involvement;<br>
+To expose feelings is to risk rejection;<br>
+To place your dreams before the crowd is to risk ridicule;<br>
+To love is to risk not being loved in return;<br>
+To go forward in the face of over whelming odds is to risk failure.<p>
+But risks must be taken because the greatest hazard in life is to risk nothing.<p>
+The person who risks nothing, has nothing, is nothing.<p>
+He/she may avoid suffering and sorrow, but he/she cannot learn, feel, change, grow, or love.<p>
+Chained by his/her certitudes, he/she is a slave, he/she has fortified his/her freedom.<p>
+Only a person who takes risk is FREE.<p>
+</td></tr>
+
+<tr><td><p>
+<h3><u>A Friend...</u></h3><p>
+(<font color = red><b>A</b></font>)ccepts you exactly as you are.<br>
+(<font color = yellow><b>B</b></font>)elieves in you when no one else does.<br>
+(<font color = blue><b>C</b></font>)alls you up just to say "Hi!"<br>
+(<b>D</b>)oesn't give up on you, even through the worst.<br>
+(<b>E</b>)nvisions the whole of you.<br>
+(<b>F</b>)orgives your mistakes over & over again!<br>
+(<b>G</b>)ive unconditionally, no matter what.<br>
+(<b>H</b>)elps you through the tough times.<br>
+(<b>I</b>)nvites you over, just for a chat.<br>
+(<b>J</b>)okes around, when you're feeling blue.<br>
+(<b>K</b>)eeps you close to their heart.<br>
+(<b>L</b>)oves you unconditionally for who you are.<br>
+(<b>M</b>)akes a difference in your life.<br>
+(<b>N</b>)ever Judges you, rather encourages you.<br>
+(<b>O</b>)ffers support when you need some guidance.<br>
+(<b>P</b>)icks you up, whenever you're down.<br>
+(<b>Q</b>)uiets your fears, when worries take over you.<br>
+(<b>R</b>)aises your spirits, when things go wrong.<br>
+(<b>S</b>)ays nice thing to make you feel special.<br>
+(<b>T</b>)ells you the truth when you need to hear it.<br>
+(<b>U</b>)nderstands you better than anyone else.<br>
+(<b>V</b>)alues your friendship through thick & thin.<br>
+(<b>W</b>)alks beside you no matter which path you take.<br>
+(<b>X</b>)-plains things you don't understand.<br>
+(<b>Y</b>)ells when you won't listen.<br>
+(<b>Z</b>)aps you back to reality.<p>
+</td></tr>
+
+<tr><td><p>
+<h3><u>A Meaningful Little story:</u></h3><p>
+One day a farmer's donkey fell down into a well. The animal cried piteously for hours 
+as the farmer tried to figure out what to do. Finally he decided the animal was too 
+old and the well needed to be covered up anyway, it just wasn't worth it to retrieve 
+the donkey.  He invited all his neighbours to come over and help him. They all grabbed 
+a shovel and began to shovel dirt into the well. At first, the donkey realized what 
+was happening and cried horribly.  Then, to everyone's amazement, he quieted down. A
+few shovel loads later, the farmer finally looked down the well and was astonished 
+at what he saw.  With every shovel of dirt that hit his back, the donkey was doing 
+something amazing.  He would shake it off and take a step up.  As the farmer's neighbours 
+continued to shovel dirt on top of the animal, he would shake it off and take a step up.  
+Pretty soon, everyone was amazed as the donkey stepped up over the edge of the well and 
+trotted off!<p>
+Life is going to shovel dirt on you, all kinds of dirt.  The trick to getting out of the 
+well is to shake it off and take a step up.  Each of our troubles is a stepping stone.  
+We can get out of the deepest wells just by not stopping, never giving up! Shake it off 
+and take a step up!<p>
+</td></tr>
+
+<tr><td><p>
+<h3><u>Remember the five simple rules to be happy:</u></h3>
+1. Free your heart from hatred.<br>
+2. Free your mind from worries.<br>
+3. Live simply.<br>
+4. Give more.<br>
+5. Expect less.<p>
+</td></tr>
+
+<tr><td><p>
+<h3><u>I AM THANKFUL ...</u></h3><p>
+For the wife who says "It's hot dogs tonight", <br>
+because she is home with me, not with someone else. <br>
+<p>
+For the teenager who is complaining about doing dishes, <br>
+because that means she is at home; not on the streets. <br>
+<p>
+For the taxes that I pay, <br>
+because it means that I am employed. <br>
+<p>
+For the mess to clean after a party, <br>
+because it means that I have been surrounded by friends. <br>
+<p>
+For the clothes that fit a little too snug, <br>
+because it means I have enough to eat. <br>
+<p>
+For my shadow that watches me work, <br>
+beacuse it means I am out in the sunshine. <br>
+<p>
+For a lawn that needs mowing, windows that need cleaning, and gutters that need fixing, <br>
+beacuse it means I have a home. <br>
+<p>
+For all the complaining I hear about the government, <br>
+because it means that we have freedom of speech. <br>
+<p>
+For the parking spot I find at the far end of the parking lot, <br>
+because it means I am capable of walking and <br>
+that I have been blessed with transportation. <br>
+<p>
+For my huge heating bill, <br>
+because it means I am warm. <br>
+<p>
+For the lady behind me in church that sings off key, <br>
+because it means that I can hear. <br>
+<p>
+For the pile of laundry and ironing, <br>
+because it means I have clothes to wear. <br>
+<p>
+For weariness and aching muscles at the end of the day, <br>
+because it means I have been capable of working hard. <br>
+<p> 
+For the alarm that goes off in the early morning hours, <br>
+because it means that I am alive <br>
+<p>
+And finally... For too much e-mail, <br>
+because it means I have friends who are thinking of me. <p>
+</td></tr>
+
+<tr><td>
+<h3><u>88 Ways to Know If You're Chinese</u></h3><p>
+<pre>
+1. You look like you are 18.
+2. You like to eat chicken feet.
+3. You suck on fish heads and fish fins.
+4. You have a Chinese knick-knack hanging on your rear view mirror.
+5. You sing karaoke.
+6. Your house is covered with tile.
+7. Your kitchen is covered by a sticky film of grease.
+8. Your stove is covered with aluminum foil.
+9. You leave the plastic covers on your remote control.
+10. You've never kissed your mom or dad.
+11. You've never hugged your mom or dad.
+12. Your unassisted vision is worse than 20/500.
+13. You wear contacts, to avoid wearing your "coke bottle glasses".
+14. You've worn glasses since you were in fifth grade.
+15. Your hair sticks up when you wake up.
+16. You'll haggle over something that is not negotiable.
+17. You love to use coupons.
+18. You drive around looking for the cheapest petrol.
+19. You drive around for hours looking for the best parking space.
+20. You take showers at night.
+21. You avoid the non-free snacks in hotel rooms.
+22. You don't mind squeezing 20 people into one motel room.
+23. Most girls have more body hair than you, if you are male.
+24. You tap the table when someone pours tea for you.
+25. You say "Aiya!" and "Wah!" frequently.
+26. You don't want to wear your seatbelt because it is uncomfortable.
+27. You love Las Vegas, slot machines, and blackjack.
+28. You unwrap Christmas gifts very carefully, so you can reuse the paper.
+29. You only buy Christmas cards after Christmas, when they are 50% off.
+30. You have a vinyl tablecloth on your kitchen table.
+31. You spit bones and other food scraps on the table. That's why you need the vinyl 
+    tablecloth.
+32. You have stuff in the freezer since the beginning of time.
+33. You use the dishwasher as a dish rack.
+34. You have never used your dishwasher.
+35. You keep a Thermos of hot water available at all times.
+36. You eat all meals in the kitchen.
+37. You save grocery bags, tin foil, and tin containers.
+38. You have a piano in your living room.
+39. You pick your teeth at the dinner table (but you cover your mouth).
+40. You twirl your pen around your fingers.
+41. You hate to waste food.
+42. You have Tupperware in your fridge with three bites of rice or one leftover 
+    chicken wing
+43. You don't own any real Tupperware - only a cupboard full
+    of used but carefully rinsed margarine tubs, takeout containers, and jam jars.
+44. You also use the jam jars as drinking glasses.
+45. You have a collection of miniature shampoo bottles that you take every time you 
+    stay in a hotel.
+46. You carry a stash of your own food whenever you travel
+    (travel means any car ride longer than 15 minutes).
+    These snacks are always dried and include dried plums, mango, ginger, and squid.
+47. You wash your rice at least 2-3 times before cooking it.
+48. Your dad thinks he can fix everything himself.
+49. The dashboard of your Honda is covered by hundreds of small toys.
+50. You don't use measuring cups.
+51. You beat eggs with chopsticks.
+52. You have a teacup with a cover on it.
+53. You always look phone numbers up in the phone book, since calling information 
+    (*69) costs 50 cents.
+54. You only make long distance calls after 11pm.
+55. If you are male, you clap at something funny and if you are female, you giggle 
+    whilst placing a hand over your mouth.
+56. You like Chinese films in their original undubbed versions.
+57. You love Chinese Martial Arts films.
+58. You've learnt some form of martial arts.
+59. Shaolin actually means something to you.
+60. You like congee with thousand-year-old eggs.
+61. You prefer your shrimp with the heads and legs still attached.
+62. You never call your parents just to say hi.
+63. If you don't live at home, when your parents call, they ask if you've eaten, 
+    even if it's midnight.
+64. When you're sick, your parents tell you not to eat fried foods or baked goods 
+    due to yeet hay.
+65. You know what yeet hay is.
+66. You e-mail your Chinese friends at work, even though you only 10 feet apart.
+67. You use a face cloth.
+68. You starve yourself before going to all you can eat places.
+69. You know someone who can get you a good deal on jewelry or electronics.
+70. You save your old Coke bottle glasses even though you're never going to use them again.
+71. You own your own meat cleaver and sharpen it.
+72. Your toothpaste tubes are all squeezed paper-thin.
+73. You know what moon cakes are.
+74. When there is a sale on toilet paper, you buy 100 rolls and store them in your 
+    closet or in the bedroom of an adult child who has moved out.
+75. Your parents know how to launch nasal projectiles.
+76. You iron your own shirts.
+77. You play a musical instrument.
+78. Even if you're totally full, if someone says they're going to throw away the 
+    leftovers on the table, you'll finish them.
+79. You've eaten a red bean popsicle.
+80. You bring oranges (or other produce) with you as a gift when you visit people's homes.
+81. You fight over who pays the dinner bill.
+82. You majored in something practical like engineering, medicine or law.
+83. You live with your parents and you are 30 years old (and they prefer it that way). 
+    Or if you're married and 30 years old, you live in the apartment next door to your 
+    parents, or at least in the same neighborhood.
+84. You don't tip more than 10% at a restaurant, and if you do, you tip Chinese delivery 
+    guys/waiters more.
+85. You have acquired a taste for bitter melon.
+86. You eat every last grain of rice in your bowl, but don't eat the last piece of food 
+    on the table.
+87. You know why there are 88 reasons.
+88. You see the truth in this and then send it to all your Chinese friends.
+</pre>
+</td></tr>
+
+<tr><td>
+<h3><u>To make a million dollars ...</u></h3><p>
+Start with $10,000 and invest $2,400 more per year for 30 years. <br>
+Start with $0 and invest $3,500 per year for 30 years. <br>
+Start with $0 and invest $1,000 per year for 40 years. <br>
+Start with $50,000 and invest $10,000 per year for 18 years.<p>
+</td></tr>
+
+<tr><td>
+<h3><u>There are 4 types of people in this world:</u></h3><p>
+1 - People who make things happen<br>
+2 - People who wait for things to happen<br>
+3 - People who have things happen to them<br>
+4 - People who don't know things are happening
+</td></tr>
+
+</table>
+
+</center>
+
+</html>

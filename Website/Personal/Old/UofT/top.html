@@ -1,0 +1,76 @@
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html;
+charset=iso-8859-1">
+
+<table><tr><td align=center>
+<script language="JavaScript1.2">
+
+/*
+Cross browser marquee script- 
+© Dynamic Drive (www.dynamicdrive.com)
+For full source code, installation instructions,
+100's more DHTML scripts, and Terms Of
+Use, visit dynamicdrive.com
+*/
+
+//Specify the marquee's width (in pixels)
+var marqueewidth=330
+//Specify the marquee's height (in pixels, pertains only to NS)
+var marqueeheight=20
+//Specify the marquee's scroll speed (larger is faster)
+var speed=9
+//Specify the marquee contents
+
+// Return key will make the script not initiallize, use space key instead
+var marqueecontents='<font face="Ariel"><font color=#4444ca size=5>H</font><font color=#5555cf>e</font><font color=#6666df>l</font><font color=#7777ef>l</font><font color=#8383ff>o</font>&nbsp<font color=#8888ff size=3>a</font><font color=#9595ff>n</font><font color=#9999ff>d</font>&nbsp<font color=#aaaaff size=5>W</font><font color=#bbbbff>e</font><font color=#bbbbff>l</font><font color=#bbbbff>c</font><font color=#bbbbff>o</font><font color=#bbbbff>m</font><font color=#bbbbff>e</font></font>'
+if (document.all)
+document.write('<marquee scrollAmount='+speed+' style="width:'+marqueewidth+'">'+marqueecontents+'</marquee>')
+
+function regenerate() {
+   window.location.reload()
+}
+
+function regenerate2() {
+   if (document.layers){
+      setTimeout("window.onresize=regenerate",450)
+      intializemarquee()
+   }
+}
+
+function intializemarquee() {
+   document.cmarquee01.document.cmarquee02.document.write
+   ('<nobr>'+marqueecontents+'</nobr>')
+   document.cmarquee01.document.cmarquee02.document.close()
+   thelength=document.cmarquee01.document.cmarquee02.document.width
+   scrollit()
+}
+
+function scrollit() {
+   if (document.cmarquee01.document.cmarquee02.left>=thelength*(-1)){
+      document.cmarquee01.document.cmarquee02.left-=speed
+      setTimeout("scrollit()",100)
+   }
+   else{
+      document.cmarquee01.document.cmarquee02.left=marqueewidth
+      scrollit()
+   }
+}
+
+window.onload=regenerate2
+
+</script>
+
+<ilayer width=&{marqueewidth}; height=&{marqueeheight}; name="cmarquee01">
+<layer name="cmarquee02"></layer>
+</ilayer>
+</td></tr></table>
+
+<body bgcolor="#aadffc" text=yellow link=blue alink=green vlink=red>
+
+</body>
+
+</html>
+
+
