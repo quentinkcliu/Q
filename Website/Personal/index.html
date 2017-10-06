@@ -6,7 +6,7 @@
   <meta name="description" content="Quentin Liu personal site">
   <meta name="author" content="Quentin Liu">
 
-  <title>Welcome Friend!</title>
+  <title>Quentin Liu</title>
 
   <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
 <link rel='stylesheet' id='twentytwelve-style-css'  href='css/styles.css' type='text/css' media='all' />
@@ -82,8 +82,7 @@ jQuery(document).ready(function() {
 
   <section class="social-media">
 
-
-<a href="https://twitter.com/quentinkcliu/" target="_blank">
+<a href="https://github.com/quentinkcliu/" target="_blank" alt="https://github.com/quentinkcliu/">
 	<div class="github-popout social-popout"><img src="images/socialMedia/gitHub.png" /></div>
 </a>
 <a href="https://stackoverflow.com/users/8623472/ninjaql/" target="_blank">
@@ -101,10 +100,10 @@ jQuery(document).ready(function() {
 <a href="https://twitter.com/quentinkcliu/" target="_blank">
 	<div class="twitter-popout social-roll"><img src="images/socialMedia/twitter.png"></div>
 </a>
-<a href="https://twitter.com/quentinkcliu/" target="_blank">
+<a href="https://google.ca/" target="_blank">
 	<div class="pinterest-popout social-roll"><img src="images/socialMedia/pinterest.png" /></div>
 </a>
-<a href="https://cliu/" target="_blank">
+<a href="https://google.ca/" target="_blank">
 	<div class="instagram-popout social-roll"><img src="images/socialMedia/instagram.png" /></div>
 </a>
 <a href="https://google.ca" target="_blank">
@@ -114,23 +113,22 @@ jQuery(document).ready(function() {
 	<div class="reddit-popout social-roll"><img src="images/socialMedia/gmail.png" /></div>  
 </a>
 
-
-
-
-
 </section>
 
-
+Utilities
 
 <div class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
+      
       <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+      
       <form>
         <div class="form-group">
           <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
         </div>
       </form>
+      
       <div id="output">
         <div class="card card-primary mb-2">
           <div class="card-block">
@@ -138,21 +136,20 @@ jQuery(document).ready(function() {
 			<div id="gramsOutput"></div>
           </div>
         </div>
-
-        <div class="card card-success mb-2">
+	    <div class="card card-success mb-2">
           <div class="card-block">
             <h4>Kilograms:</h4>
             <div id="kgOutput"></div>
           </div>
         </div>
-
-        <div class="card card-danger mb-2">
+		<div class="card card-danger mb-2">
           <div class="card-block">
             <h4>Ounces:</h4>
             <div id="ozOutput"></div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>
@@ -164,40 +161,18 @@ jQuery(document).ready(function() {
           <h2 class="text-center">Temperature Converter</h2>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="jumbotron" id="main">
-        <form name="tempConv" class="form-horizontal text-primary">
-          <div class="form-group">
-            <label for="temp" class="control-label col-md-2">Temperature:</label>
-            <div class="col-md-4">
-              <input type="text" name="temp" id="temp" class="form-control">
-            </div>
-          </div>
 
-          <div class="form-group">
-            <div class="radio col-md-offset-2">
-              <label><input type="radio" name="choice" value="fahrenheit" checked>Convert to Fahrenheit</label>
-            </div>
-            <div class="radio col-md-offset-2">
-              <label><input type="radio" name="choice" value="celsius">Convert to Celsius</label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="result" class="control-label col-md-2">Result:</label>
-            <div class="col-md-4">
-              <input type="text" name="result" id="result" class="form-control">
-            </div>
-          </div>
-          <br>
-          <button type="button" id="button" class="btn btn-danger btn-md col-md-offset-2" onclick="convertTemp()">
-            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-          Convert
-          </button>
-        </form>
-      </div>
+	<p>
+	<label>Fahrenheit:</label>
+  	<input id="lblFahrenheit" type="number" min="-459.67" placeholder="Fahrenheit" oninput="convertFtoC(this.value)" onchange="convertFtoC(this.value)">
+	</p>
+	<p>
+	<label>Celcius:</label>
+  	<input id="lblCelcius" type="number" min="-273.15" placeholder="Celcius" oninput="convertCtoF(this.value)" onchange="convertCtoF(this.value)">
+	</p>
     </div>
-  </div>
+   </div>
+
 
   <script src="js/scripts.js"></script>
 </body>

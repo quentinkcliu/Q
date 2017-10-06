@@ -6,39 +6,195 @@
   <meta name="description" content="Quentin Liu personal site">
   <meta name="author" content="Quentin Liu">
 
-  <title>Welcome Friend!</title>
+  <title>Quentin Liu</title>
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
+<link rel='stylesheet' id='twentytwelve-style-css'  href='css/styles.css' type='text/css' media='all' />
+<script>
+jQuery(document).ready(function() {
+    jQuery('.menu-icon').click(function() {
+        jQuery('#masthead.site-header').toggleClass('extended');
+    });
+});
+</script>
+<!--link rel='stylesheet' id='jetpack_css-css'  href='http://bradsknutson.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.5' type='text/css' media='all' /-->
+
+
 </head>
 
-<body>
+<body class="single single-blog postid-602 full-width custom-font-enabled single-author">
+<!--body-->
 
 <header class="v-header container">
     <div class="fullscreen-video-wrap">
-	<video src=video/typing.mov autoplay="" loop=""></video>
+	  <video src=video/typing.mov autoplay="" loop=""></video>
     </div>
     <div class="header-overlay"></div>
     <div class="header-content text-md-center">
       <h1>Welcome Everyone</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
+      <p>
+      	Hi
+      </p>
       <a class="btn">Find Out More</a>
     </div>
   </header>
 
   <section class="section section-a">
     <div class="container">
-      <h2>Section A</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+      <h2>Coding</h2>
+      <p>
+      	C#<br>
+      	Java<br>
+      	GitHub: <a href="https://github.com/quentinkcliu">https://github.com/quentinkcliu</a>
+      </p>
     </div>
   </section>
 
   <section class="section section-b">
     <div class="container">
-      <h2>Section B</h2>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, impedit amet minima iste autem cumque et maiores blanditiis doloribus aut dolorum quaerat non est voluptatum, tempore ut dolorem voluptas quod quae accusantium, ex inventore ducimus. Beatae mollitia exercitationem, quam similique, consectetur ratione reprehenderit delectus neque eligendi facere soluta dolor ducimus!</p>
+      <h2>Interests</h2>
+      <p>
+      	Movie: Sci-Fi - The Matrix<br>
+      	Anime: Dragon Ball - Super/Z; Hunter X Hunter<br>
+      	Finance: TMX Stocks<br>
+      </p>
     </div>
   </section>
 
+    <section class="section section-c">
+    <div class="container">
+      <h2>Social Media</h2>
+      <p>
+      	
+
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-d">
+    <div class="container">
+      <h2></h2>
+      <p>
+      	
+      </p>
+    </div>
+  </section>
+
+  <section class="social-media">
+
+<a href="https://github.com/quentinkcliu/" target="_blank" alt="https://github.com/quentinkcliu/">
+	<div class="github-popout social-popout"><img src="images/socialMedia/gitHub.png" /></div>
+</a>
+<a href="https://stackoverflow.com/users/8623472/ninjaql/" target="_blank">
+	<div class="facebook-popout social-popout"><img src="images/socialMedia/stackOverflow.png" /></div>
+</a>
+<a href="https://plus.google.com/103329969405518808443/" target="_blank">
+	<div class="google-popout social-popout"><img src="images/socialMedia/googleplus.png" /></div>
+</a>
+<a href="https://www.linkedin.com/in/quentinkcliu/" target="_blank">
+	<div class="linkedin-popout social-popout"><img src="images/socialMedia/linkedin.png" /></div>
+</a>
+<a href="https://www.facebook.com/quentin.liu/" target="_blank">
+	<div class="facebook-popout social-roll"><img src="images/socialMedia/facebook.png" /></div>
+</a>
+<a href="https://twitter.com/quentinkcliu/" target="_blank">
+	<div class="twitter-popout social-roll"><img src="images/socialMedia/twitter.png"></div>
+</a>
+<a href="https://google.ca/" target="_blank">
+	<div class="pinterest-popout social-roll"><img src="images/socialMedia/pinterest.png" /></div>
+</a>
+<a href="https://google.ca/" target="_blank">
+	<div class="instagram-popout social-roll"><img src="images/socialMedia/instagram.png" /></div>
+</a>
+<a href="https://google.ca" target="_blank">
+	<div class="reddit-popout social-roll"><img src="images/socialMedia/reddit.png" /></div>  
+</a>
+<a href="mailto:quentinkcliu@gmail.com?subject=I found you on your website.">
+	<div class="reddit-popout social-roll"><img src="images/socialMedia/gmail.png" /></div>  
+</a>
+
+</section>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      
+      <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+      
+      <form>
+        <div class="form-group">
+          <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
+        </div>
+      </form>
+      
+      <div id="output">
+        <div class="card card-primary mb-2">
+          <div class="card-block">
+            <h4>Grams:</h4>
+			<div id="gramsOutput"></div>
+          </div>
+        </div>
+	    <div class="card card-success mb-2">
+          <div class="card-block">
+            <h4>Kilograms:</h4>
+            <div id="kgOutput"></div>
+          </div>
+        </div>
+		<div class="card card-danger mb-2">
+          <div class="card-block">
+            <h4>Ounces:</h4>
+            <div id="ozOutput"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="jumbotron" id="wrap">
+    <div class="container" id="heading">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="text-center">Temperature Converter</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="jumbotron" id="main">
+        <form name="tempConv" class="form-horizontal text-primary">
+          <div class="form-group">
+            <!--label for="temp" class="control-label col-md-2">Temperature:</label-->
+            <div class="col-md-4">
+              <input type="text" name="temp" id="temp" class="form-control" placeholder="Enter Temperature"><p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="radio col-md-offset-2">
+              <label><input type="radio" name="choice" value="fahrenheit" checked>&#x2103; to &#x2109;</label>
+            </div>
+            <div class="radio col-md-offset-2">
+              <label><input type="radio" name="choice" value="celsius">&#x2109; to &#x2103;</label><p>
+            </div>
+          </div>
+          <div class="form-group">
+            <!--label for="result" class="control-label col-md-2">Conversion:</label-->
+            <div class="col-md-4">
+              <output type="text" name="result" id="result" class="form-control" placeholder="Converted Temperature...">
+            </div>
+          </div>
+          <br>
+          <button type="button" id="button" class="btn btn-danger btn-md col-md-offset-2" onclick="convertTemp()">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+          Convert
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="js/scripts.js"></script>
 </body>
