@@ -19,6 +19,10 @@ jQuery(document).ready(function() {
 </script>
 <!--link rel='stylesheet' id='jetpack_css-css'  href='http://bradsknutson.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.5' type='text/css' media='all' /-->
 
+<!--next three lines for picture popout-->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 
@@ -43,9 +47,20 @@ jQuery(document).ready(function() {
     <div class="container">
       <h2>Coding</h2>
       <p>
-      	C#<br>
-      	Java<br>
-      	GitHub: <a href="https://github.com/quentinkcliu">https://github.com/quentinkcliu</a>
+        <table border=0 cellpadding=6>
+      	  <tr>
+      	    <td><img src="images\coding\miniLogoCsharp.png" height=50 title="C#"></a></td>
+      	    <td><img src="images\coding\miniLogoHTML5.png" height=50 title="HTML5"></a></td>
+      	  </tr>
+      	  <tr>
+      	    <td><img src="images\coding\miniLogoJava.png" height=50 title="Java"></a></td>
+      	    <td><img src="images\coding\miniLogoCSS3.png" height=50 title="CSS3"></a></td>
+      	  </tr>
+      	  <tr>
+      	    <td><a href="https://github.com/quentinkcliu" target="_blank" title="GitHub"><img src="images\coding\miniLogoGitHub.png" height=50></a></td>
+      	    <td><img src="images\coding\miniLogoJavaScript.png" height=50 title="JavaScript"></a></td>
+      	  </tr>
+      	</table>
       </p>
     </div>
   </section>
@@ -54,9 +69,11 @@ jQuery(document).ready(function() {
     <div class="container">
       <h2>Interests</h2>
       <p>
-      	Movie: Sci-Fi - The Matrix<br>
-      	Anime: Dragon Ball - Super/Z; Hunter X Hunter<br>
-      	Finance: TMX Stocks<br>
+        <table border=1 cellpadding=4>
+      	  <tr><td align=right>Movie:</td><td align=left> Sci-Fi - The Matrix</td><br>
+      	  <tr><td align=right>Anime:</td><td align=left> Dragon Ball - Super/Z<br> Hunter X Hunter<br>
+      	  <tr><td align=right>Finance:</td><td align=left> TMX Stocks<br>
+      	</table>
       </p>
     </div>
   </section>
@@ -115,7 +132,29 @@ jQuery(document).ready(function() {
 
 </section>
 
+  <section class="section section-b">
+    <div class="container">
+      <h2>Family</h2>
+      <p>
+        <table border=0 cellpadding=4>
+      	  <tr>
+        	<td>
+  				<div id="pageone" data-role="main" class="ui-content">
+    			<a href="#myPopup" data-rel="popup" data-position-to="window">
+    			<img src="images\family\AriBabies.jpg" alt="Arianna with her babies." style="width:100px;"></a>
+    			<div data-role="popup" id="myPopup">
+      			<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images\family\AriBabies.jpg" style="width:800px;" alt="Arianna with her babies.">
+				</div>
+  				</div>
+      	    </td>
+      	  </tr>
+      	</table>
+      </p>
+    </div>
+  </section>
 
+
+Utilities
 
 <div class="container">
   <div class="row">
@@ -161,40 +200,18 @@ jQuery(document).ready(function() {
           <h2 class="text-center">Temperature Converter</h2>
         </div>
       </div>
-    </div>
-    <div class="container">
-      <div class="jumbotron" id="main">
-        <form name="tempConv" class="form-horizontal text-primary">
-          <div class="form-group">
-            <!--label for="temp" class="control-label col-md-2">Temperature:</label-->
-            <div class="col-md-4">
-              <input type="text" name="temp" id="temp" class="form-control" placeholder="Enter Temperature"><p>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <div class="radio col-md-offset-2">
-              <label><input type="radio" name="choice" value="fahrenheit" checked>&#x2103; to &#x2109;</label>
-            </div>
-            <div class="radio col-md-offset-2">
-              <label><input type="radio" name="choice" value="celsius">&#x2109; to &#x2103;</label><p>
-            </div>
-          </div>
-          <div class="form-group">
-            <!--label for="result" class="control-label col-md-2">Conversion:</label-->
-            <div class="col-md-4">
-              <output type="text" name="result" id="result" class="form-control" placeholder="Converted Temperature...">
-            </div>
-          </div>
-          <br>
-          <button type="button" id="button" class="btn btn-danger btn-md col-md-offset-2" onclick="convertTemp()">
-            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
-          Convert
-          </button>
-        </form>
-      </div>
+	<p>
+	<label>Fahrenheit:</label>
+  	<input id="lblFahrenheit" type="number" min="-459.67" placeholder="Fahrenheit" oninput="convertFtoC(this.value)" onchange="convertFtoC(this.value)">
+	</p>
+	<p>
+	<label>Celcius:</label>
+  	<input id="lblCelcius" type="number" min="-273.15" placeholder="Celcius" oninput="convertCtoF(this.value)" onchange="convertCtoF(this.value)">
+	</p>
     </div>
-  </div>
+   </div>
+
 
   <script src="js/scripts.js"></script>
 </body>

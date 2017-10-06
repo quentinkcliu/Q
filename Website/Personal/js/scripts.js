@@ -20,3 +20,6 @@ function convertCtoF(inputQuery) {
   inputQuery = parseFloat(inputQuery);
   document.getElementById("lblFahrenheit").value=(inputQuery*1.8+32).toFixed(1);
 }
+
+// Picture Pop Out
+

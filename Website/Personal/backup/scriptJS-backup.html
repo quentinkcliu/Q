@@ -11,27 +11,15 @@
 
 // Convert Temperature
 
-function convertTemp() {
-  var temperature = Number(document.tempConv.temp.value);
-  var tempType;
-  var result;
-
-  for (var i = 0; i < document.tempConv.choice.length; i++) {
-    if (document.tempConv.choice[i].checked) {
-      tempType = document.tempConv.choice[i].value;
-      break;
-    }
-  }
-
-  if (tempType === 'fahrenheit') {
-    result = temperature * 9 / 5 + 32;
-  } else {
-    result = (temperature - 32) * 5 / 9;
-  }
-  
-  if (tempType === 'fahrenheit') {
-    document.getElementById('result').value = result.toFixed(2) + " " + String.fromCharCode(8457);
-  } else {
-    document.getElementById('result').value = result.toFixed(2) + " " + String.fromCharCode(8451);
-  }
+function convertFtoC(inputQuery) {
+  inputQuery = parseFloat(inputQuery);
+  document.getElementById("lblCelcius").value=((inputQuery-32)/1.8).toFixed(1);
 }
+
+function convertCtoF(inputQuery) {
+  inputQuery = parseFloat(inputQuery);
+  document.getElementById("lblFahrenheit").value=(inputQuery*1.8+32).toFixed(1);
+}
+
+// Picture Pop Out
+

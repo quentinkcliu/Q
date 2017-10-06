@@ -1,5 +1,10 @@
 // Main body style //
 
+// dev centering margin: 0 auto; // for centering horizontally
+// text centring: text-align:center;
+// float left right; clear:both
+
+
 *{
   box-sizing: border-box;
 }
@@ -202,5 +207,3 @@ h2{
 }
 
 
-
-}

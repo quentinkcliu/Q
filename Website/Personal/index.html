@@ -19,6 +19,10 @@ jQuery(document).ready(function() {
 </script>
 <!--link rel='stylesheet' id='jetpack_css-css'  href='http://bradsknutson.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.5' type='text/css' media='all' /-->
 
+<!--next three lines for picture popout-->
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 </head>
 
@@ -64,13 +68,25 @@ jQuery(document).ready(function() {
   <section class="section section-b">
     <div class="container">
       <h2>Interests</h2>
-      <p>
+      <table>
+      <tr>
+      <td>
+
         <table border=1 cellpadding=4>
       	  <tr><td align=right>Movie:</td><td align=left> Sci-Fi - The Matrix</td><br>
       	  <tr><td align=right>Anime:</td><td align=left> Dragon Ball - Super/Z<br> Hunter X Hunter<br>
       	  <tr><td align=right>Finance:</td><td align=left> TMX Stocks<br>
       	</table>
-      </p>
+	  </td>
+	  <td>
+      	<table border=1 cellpadding=4>
+      	  <tr><td align=right>TV Series:</td><td align=left>Star Trek TNG/DS9</td><br>
+      	  <tr><td align=right>TV Series2:</td><td align=left>Stargate Atlantis<br>
+      	  <tr><td align=right>TV Series3:</td><td align=left>The Outer Limits<br>
+      	  <tr><td align=right>TV Series3:</td><td align=left>Sliders<br>
+      	</table>
+	  </td>
+      </table>
     </div>
   </section>
 
@@ -127,6 +143,27 @@ jQuery(document).ready(function() {
 </a>
 
 </section>
+
+  <section class="section section-b">
+    <div class="container">
+      <h2>Family</h2>
+        <table border=0 cellpadding=4>
+      	  <tr>
+        	<td>
+  			  <div id="pageone" data-role="main" class="ui-content">
+    			<a href="#myPopup" data-rel="popup" data-position-to="window">
+    			  <img src="images\family\AriBabies.jpg" alt="Arianna with her babies." style="width:200px;"></a>
+    			<div data-role="popup" id="myPopup">
+      			  <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      			  <img src="images\family\AriBabies.jpg" style="width:1300px;" alt="Arianna with her babies.">
+				</div>
+  			  </div>
+      	    </td>
+      	  </tr>
+      	</table>
+    </div>
+  </section>
+
 
 Utilities
 
