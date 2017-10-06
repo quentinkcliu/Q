@@ -1,2 +1,2 @@
-copy /Y index.html backup\backupIndex.html
+copy /Y index.html backup\index-backup.html
 pause
