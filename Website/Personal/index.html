@@ -54,9 +54,9 @@ jQuery(document).ready(function() {
     <div class="container">
       <h2>Interests</h2>
       <p>
-      	Movie: The Matrix<br>
-      	Anime: Dragon Ball<br>
-      	Finance: Stocks<br>
+      	Movie: Sci-Fi - The Matrix<br>
+      	Anime: Dragon Ball - Super/Z; Hunter X Hunter<br>
+      	Finance: TMX Stocks<br>
       </p>
     </div>
   </section>
@@ -83,21 +83,121 @@ jQuery(document).ready(function() {
   <section class="social-media">
 
 
-<div class="github-popout social-popout"><img src="images/socialMedia/imgGitHub2.png" /></div>
-<div class="facebook-popout social-popout"><img src="images/socialMedia/imgStackOverflow.png" /></div>
+<a href="https://twitter.com/quentinkcliu/" target="_blank">
+	<div class="github-popout social-popout"><img src="images/socialMedia/gitHub.png" /></div>
+</a>
+<a href="https://stackoverflow.com/users/8623472/ninjaql/" target="_blank">
+	<div class="facebook-popout social-popout"><img src="images/socialMedia/stackOverflow.png" /></div>
+</a>
+<a href="https://plus.google.com/103329969405518808443/" target="_blank">
+	<div class="google-popout social-popout"><img src="images/socialMedia/googleplus.png" /></div>
+</a>
+<a href="https://www.linkedin.com/in/quentinkcliu/" target="_blank">
+	<div class="linkedin-popout social-popout"><img src="images/socialMedia/linkedin.png" /></div>
+</a>
+<a href="https://www.facebook.com/quentin.liu/" target="_blank">
+	<div class="facebook-popout social-roll"><img src="images/socialMedia/facebook.png" /></div>
+</a>
+<a href="https://twitter.com/quentinkcliu/" target="_blank">
+	<div class="twitter-popout social-roll"><img src="images/socialMedia/twitter.png"></div>
+</a>
+<a href="https://twitter.com/quentinkcliu/" target="_blank">
+	<div class="pinterest-popout social-roll"><img src="images/socialMedia/pinterest.png" /></div>
+</a>
+<a href="https://cliu/" target="_blank">
+	<div class="instagram-popout social-roll"><img src="images/socialMedia/instagram.png" /></div>
+</a>
+<a href="https://google.ca" target="_blank">
+	<div class="reddit-popout social-roll"><img src="images/socialMedia/reddit.png" /></div>  
+</a>
+<a href="mailto:quentinkcliu@gmail.com?subject=I found you on your website.">
+	<div class="reddit-popout social-roll"><img src="images/socialMedia/gmail.png" /></div>  
+</a>
 
-<div class="google-popout social-popout"><img src="images/socialMedia/googleplus-48circle.png" /></div>
-<div class="linkedin-popout social-popout"><img src="images/socialMedia/linkedin-48circle.png" /></div>
 
-<div class="facebook-popout social-roll"><img src="images/socialMedia/facebook-48circle.png" /></div>
-<div class="twitter-popout social-roll"><img src="images/socialMedia/twitter-48circle.png" /></div>
-<div class="pinterest-popout social-roll"><img src="images/socialMedia/pinterest-48circle.png" /></div>
-<div class="instagram-popout social-roll"><img src="images/socialMedia/instagram.png" /></div>
-<div class="tumblr-popout social-roll"><img src="images/socialMedia/tumblr-48circle.png" /></div>
-<div class="reddit-popout social-roll"><img src="images/socialMedia/reddit-48circle.png" /></div>  
+
+
 
 </section>
 
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1 class="display-4 text-center mb-3">Weight Converter</h1>
+      <form>
+        <div class="form-group">
+          <input id="lbsInput" type="number" class="form-control form-control-lg" placeholder="Enter Pounds...">
+        </div>
+      </form>
+      <div id="output">
+        <div class="card card-primary mb-2">
+          <div class="card-block">
+            <h4>Grams:</h4>
+			<div id="gramsOutput"></div>
+          </div>
+        </div>
+
+        <div class="card card-success mb-2">
+          <div class="card-block">
+            <h4>Kilograms:</h4>
+            <div id="kgOutput"></div>
+          </div>
+        </div>
+
+        <div class="card card-danger mb-2">
+          <div class="card-block">
+            <h4>Ounces:</h4>
+            <div id="ozOutput"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="jumbotron" id="wrap">
+    <div class="container" id="heading">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="text-center">Temperature Converter</h2>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="jumbotron" id="main">
+        <form name="tempConv" class="form-horizontal text-primary">
+          <div class="form-group">
+            <label for="temp" class="control-label col-md-2">Temperature:</label>
+            <div class="col-md-4">
+              <input type="text" name="temp" id="temp" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="radio col-md-offset-2">
+              <label><input type="radio" name="choice" value="fahrenheit" checked>Convert to Fahrenheit</label>
+            </div>
+            <div class="radio col-md-offset-2">
+              <label><input type="radio" name="choice" value="celsius">Convert to Celsius</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="result" class="control-label col-md-2">Result:</label>
+            <div class="col-md-4">
+              <input type="text" name="result" id="result" class="form-control">
+            </div>
+          </div>
+          <br>
+          <button type="button" id="button" class="btn btn-danger btn-md col-md-offset-2" onclick="convertTemp()">
+            <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+          Convert
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <script src="js/scripts.js"></script>
 </body>

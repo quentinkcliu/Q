@@ -152,3 +152,51 @@ display: inline-block;
   margin: 0px;
  // box-shadow: 6px 6px 4px 4px rgba(0,0,0,0.3);
 }
+
+// Conversions //
+
+// Weight //
+
+body{
+  margin-top:60px;
+  background:#333;
+  color:#fff;
+
+
+// Temperature //
+body{
+  background-color: black;
+}
+
+h2{
+  font-family: 'Lato', sans-serif;
+  color: #ff4d4d;
+  font-weight: 100;
+  font-size: 3em;
+}
+
+#heading{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#main{
+  font-family: Courier, sans-serif;
+  font-size: 1.3em;
+  padding: 60px;
+  margin-bottom: -20px;;
+  background-color: rgba(51,51,51,0.5);
+}
+
+#wrap{
+  background: url("http://cdn.wallpapersafari.com/5/47/36DArO.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+}
+
+
+
+}
