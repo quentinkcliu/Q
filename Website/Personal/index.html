@@ -22,7 +22,6 @@ jQuery(document).ready(function() {
     });
 });
 </script>
-<!--link rel='stylesheet' id='jetpack_css-css'  href='http://bradsknutson.com/wp-content/plugins/jetpack/css/jetpack.css?ver=3.5' type='text/css' media='all' /-->
 
 <!--next three lines for picture popout-->
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
@@ -36,7 +35,7 @@ jQuery(document).ready(function() {
 
 <header class="v-header container">
     <div class="fullscreen-video-wrap">
-	  <video src=video/typing.mov autoplay="" loop=""></video>
+	  <video src=video/typing.mov autoplay="true" loop="true"></video>
     </div>
     <div class="header-overlay"></div>
     <div class="header-content text-md-center">
@@ -118,7 +117,7 @@ jQuery(document).ready(function() {
 	<div class="facebook-popout social-popout"><img src="images/socialMedia/stackOverflow.png" /></div>
 </a>
 <a href="https://plus.google.com/103329969405518808443/" target="_blank">
-	<div class="google-popout social-popout"><img src="images/socialMedia/googleplus.png" /></div>
+	<div class="google-popout social-popout"><img src="images/socialMedia/googlePlus.png" /></div>
 </a>
 <a href="https://www.linkedin.com/in/quentinkcliu/" target="_blank">
 	<div class="linkedin-popout social-popout"><img src="images/socialMedia/linkedin.png" /></div>
@@ -241,6 +240,27 @@ Utilities
 	<p>
 	<label>Celcius:</label>
   	<input id="lblCelcius" type="number" min="-273.15" placeholder="Celcius" oninput="convertCtoF(this.value)" onchange="convertCtoF(this.value)">
+	</p>
+    </div>
+   </div>
+
+
+
+  <div class="jumbotron" id="wrap">
+    <div class="container" id="heading">
+      <div class="row">
+        <div class="col-sm-12">
+          <h2 class="text-center">Height Conversion</h2>
+        </div>
+      </div>
+
+	<p>
+	<label>cm:</label>
+  	<input id="lblCm" type="number" placeholder="cm" oninput="convertCmToFeet(this.value)" onchange="convertCmToFeet(this.value)">
+	</p>
+	<p>
+	<label>feet:</label>
+  	<input id="lblFeet" type="number" placeholder="feet" oninput="convertFeetToCm(this.value)" onchange="convertFeetToCm(this.value)">
 	</p>
     </div>
    </div>

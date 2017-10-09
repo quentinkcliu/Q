@@ -1,5 +1,10 @@
 <!doctype html>
 
+<!--
+ Author: Quentin Liu
+Updated: 2017-10-06
+-->
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -68,36 +73,43 @@ jQuery(document).ready(function() {
   <section class="section section-b">
     <div class="container">
       <h2>Interests</h2>
-      <p>
-        <table border=1 cellpadding=4>
+      <table>
+      <tr>
+      <td>
+        <table border=1 cellpadding=4 bordercolor="#414141">
       	  <tr><td align=right>Movie:</td><td align=left> Sci-Fi - The Matrix</td><br>
       	  <tr><td align=right>Anime:</td><td align=left> Dragon Ball - Super/Z<br> Hunter X Hunter<br>
       	  <tr><td align=right>Finance:</td><td align=left> TMX Stocks<br>
       	</table>
-      </p>
+	  </td>
+	  <td>
+      	<table border=1 cellpadding=4 bordercolor="#414141">
+      	  <tr><td align=right rowspan="4">TV Series</td>
+      	  		<td align=left>Star Trek TNG/DS9</td><br>
+      	  <tr><td align=left>Stargate Atlantis<br>
+      	  <tr><td align=left>The Outer Limits<br>
+      	  <tr><td align=left>Sliders<br>
+      	</table>
+	  </td>
+      <td>
+        <table border=1 cellpadding=4 bordercolor="#414141">
+      	  <tr><td align=right>Books:</td><td align=left>H.G. Wells - The Time Machine</td><br>
+      	  <tr><td align=right rowspan="3">Personal<br>Development</td>
+      	  		<td align=left>Jim Rohn</td><br>
+      	  <tr><td align=left>Simon Sinek<br>
+      	  <tr><td align=left>Tony Robbins<br>
+      	</table>
+	  </td>
+      </table>
     </div>
   </section>
 
     <section class="section section-c">
     <div class="container">
       <h2>Social Media</h2>
-      <p>
-      	
-
-      </p>
-    </div>
-  </section>
-
-  <section class="section section-d">
-    <div class="container">
-      <h2></h2>
-      <p>
-      	
-      </p>
-    </div>
-  </section>
 
   <section class="social-media">
+  <div class=socialMedia-div>
 
 <a href="https://github.com/quentinkcliu/" target="_blank" alt="https://github.com/quentinkcliu/">
 	<div class="github-popout social-popout"><img src="images/socialMedia/gitHub.png" /></div>
@@ -130,26 +142,47 @@ jQuery(document).ready(function() {
 	<div class="reddit-popout social-roll"><img src="images/socialMedia/gmail.png" /></div>  
 </a>
 
+</div>
+</div>
 </section>
 
   <section class="section section-b">
     <div class="container">
       <h2>Family</h2>
-      <p>
         <table border=0 cellpadding=4>
       	  <tr>
         	<td>
-  				<div id="pageone" data-role="main" class="ui-content">
+  			  <div id="pageone" data-role="main" class="ui-content">
     			<a href="#myPopup" data-rel="popup" data-position-to="window">
-    			<img src="images\family\AriBabies.jpg" alt="Arianna with her babies." style="width:100px;"></a>
+    			  <img src="images\family\ariBabies.jpg" title="Arianna with her babies." style="height:150px;"></a>
     			<div data-role="popup" id="myPopup">
-      			<a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="images\family\AriBabies.jpg" style="width:800px;" alt="Arianna with her babies.">
+      			  <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      			  <img src="images\family\ariBabies.jpg" style="width:1300px;" title="Arianna with her babies.">
 				</div>
-  				</div>
+  			  </div>
+      	    </td>
+        	<td>
+  			  <div id="pageone" data-role="main" class="ui-content">
+    			<a href="#myPopup2" data-rel="popup" data-position-to="window">
+    			  <img src="images\family\ariRedOutfit.jpg" title="Arianna's red outfit." style="height:150px;"></a>
+    			<div data-role="popup" id="myPopup2">
+      			  <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      			  <img src="images\family\ariRedOutfit.jpg" style="width:500px;" title="Arianna's red outfit.">
+				</div>
+  			  </div>
+      	    </td>
+        	<td>
+  			  <div id="pageone" data-role="main" class="ui-content">
+    			<a href="#myPopup3" data-rel="popup" data-position-to="window">
+    			  <img src="images\family\ariBlueOutfit.jpg" title="Arianna's blue outfit." style="height:150px;"></a>
+    			<div data-role="popup" id="myPopup3">
+      			  <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      			  <img src="images\family\ariBlueOutfit.jpg" style="width:500px;" title="Arianna's blue outfit.">
+				</div>
+  			  </div>
       	    </td>
       	  </tr>
       	</table>
-      </p>
     </div>
   </section>
 

@@ -21,5 +21,14 @@ function convertCtoF(inputQuery) {
   document.getElementById("lblFahrenheit").value=(inputQuery*1.8+32).toFixed(1);
 }
 
-// Picture Pop Out
+// Convert Height
 
+function convertFeetToCm(inputQuery) {
+  inputQuery = parseFloat(inputQuery);
+  document.getElementById("lblCm").value=(inputQuery*30.48).toFixed(1);
+}
+
+function convertCmToFeet(inputQuery) {
+  inputQuery = parseFloat(inputQuery);
+  document.getElementById("lblFeet").value=(inputQuery/30.48).toFixed(1);
+}
